@@ -5,7 +5,7 @@ import { allRoute } from "../../Router/route";
 import {Link} from 'react-router-dom';
 
 
-function Login() {
+function Home() {
   return (
      <div className="homeComponent">
        <h2>React Learn App</h2>
@@ -15,4 +15,4 @@ function Login() {
      </div>
   );
 }
-export default Login;
+export default Home;
