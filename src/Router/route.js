@@ -2,5 +2,6 @@ export const allRoute = {
     ALL: '*',
     ROOT: '/',
     LOGIN: '/login',
-    REGISTRATION: '/register'
+    REGISTRATION: '/register',
+    DASHBOARD: '/dashboard'
 }

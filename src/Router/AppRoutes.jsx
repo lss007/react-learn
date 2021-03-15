@@ -2,6 +2,7 @@ import React from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
 import { allRoute } from "./route";
 import { Home, Login, Register } from "../Components/Guest";
+import { Dashboard } from "../Components/Dashboard";
 
 export default function AppRoutes() {
     return (
@@ -14,6 +15,9 @@ export default function AppRoutes() {
             </Route>
             <Route exact path={allRoute.REGISTRATION}>
               <Register />
+            </Route>
+            <Route exact path={allRoute.DASHBOARD}>
+              <Dashboard />
             </Route>
         </Switch>
     );
