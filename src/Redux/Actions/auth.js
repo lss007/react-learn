@@ -5,8 +5,8 @@ import {
   LOGIN_FAIL,
   LOGOUT,
   SET_MESSAGE
-} from "./actionType";
-import AuthService from "../Services/authService";
+} from "../Types";
+import AuthService from "../../Services/authService";
 
 // Register Action
 export const register = ( name, email, password) => (dispatch) => {

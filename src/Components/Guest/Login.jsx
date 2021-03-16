@@ -3,7 +3,7 @@ import { Form, Button, Label, Control, Text, Group } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../Actions/actionAuth";
+import { login } from "../../Redux/Actions/auth";
 import '../../Assets/css/Guest.css';
 import { allRoute } from "../../Router/route";
 

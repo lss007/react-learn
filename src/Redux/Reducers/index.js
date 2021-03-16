@@ -1,7 +1,7 @@
 import React from 'react'
 import { combineReducers } from "redux";
-import auth from "./authReducer";
-import message from "./messageReducer";
+import auth from "./auth";
+import message from "./message";
 
 export default combineReducers({
   auth,

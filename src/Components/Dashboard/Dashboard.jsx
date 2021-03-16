@@ -4,7 +4,7 @@ import { Form, Button, Label, Control, Text, Group } from 'react-bootstrap';
 import '../../Assets/css/Guest.css';
 import { allRoute } from "../../Router/route";
 import {Link, useHistory, Redirect} from 'react-router-dom';
-import { logout } from "../../Actions/actionAuth";
+import { logout } from "../../Redux/Actions/auth";
 
 
 
