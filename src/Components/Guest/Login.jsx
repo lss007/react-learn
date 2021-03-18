@@ -12,12 +12,14 @@ function Login(props) {
   const [password, setPassword] = useState('');
   const [successful, setSuccessful] = useState(false);
   const { isLoggedIn } = useSelector(state => state.auth);
+  const [loading, setLoading] = useState(false);
   const { message } = useSelector(state => state.message);
   const dispatch = useDispatch();
 
   const handleLogin = (e) => {
     e.preventDefault();
     setSuccessful(false);
+    setLoading(true);
     dispatch(login(email, password))
         .then((res) => {
           props.history.push("/dashboard");
@@ -25,6 +27,7 @@ function Login(props) {
         })
         .catch((res) => {
           console.log(res);
+          setLoading(false);
         });
 
   }
@@ -38,8 +41,11 @@ function Login(props) {
      <Form onSubmit={handleLogin}>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Enter email" />
-      </Form.Group>
+        <Form.Control
+          type="email"
+          value={email}
+          placeholder="Enter email" />
+        </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
@@ -48,9 +54,18 @@ function Login(props) {
       <Form.Group controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
+      { loading ?
+        <Button variant="primary" type="button">
+        <div className="spinner-grow" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+        </Button>
+      :
       <Button variant="primary" type="submit">
         Login
       </Button>
+      }
+
       </Form>
       {message && (
         <div className="form-group">

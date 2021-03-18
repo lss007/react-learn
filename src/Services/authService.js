@@ -12,7 +12,9 @@ const register = (name, email, password) => {
       password
     })
     .then((response) => {
+      console.log();
       if (response.data.token) {
+
         localStorage.setItem("authToken", JSON.stringify(response.data));
       }
 

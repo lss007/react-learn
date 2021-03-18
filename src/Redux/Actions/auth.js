@@ -6,6 +6,7 @@ import {
   LOGOUT,
   SET_MESSAGE
 } from "../Types";
+
 import AuthService from "../../Services/authService";
 
 // Register Action
